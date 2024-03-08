@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import Form from './components/form'
-function App() {
-  const [state, setState] = useState(true)
+import React from 'react'
+import UseContextProvider from './context/UseContextProvider'
+import Routes from './routes'
+const App = () => {
   return (
-
-    <div>
-      <button className="btn btn-primary" onClick={()=> setState(!state)}>Toggle</button>
-      {state? <Form></Form> : null}
-    </div>
-  );
+    <UseContextProvider>
+     <Routes/>
+    </UseContextProvider>
+  )
 }
 
-export default App;
+export default App
+
