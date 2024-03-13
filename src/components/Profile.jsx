@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import UserContext from "../context/UserContext";
 import { Card } from "react-bootstrap";
-
+// import "./Profile.css"
 const Profile = () => {
   const { userid } = useContext(UserContext);
   const [user, setUser] = useState([]);
@@ -15,16 +15,13 @@ const Profile = () => {
   if (!user) return <div>User Not found</div>;
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "26rem" }} className="p-card">
         <Card.Body>
           <Card.Title>{user.name}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
             {user.username}
           </Card.Subtitle>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
+          <Card.Text></Card.Text>
         </Card.Body>
       </Card>
     </div>
